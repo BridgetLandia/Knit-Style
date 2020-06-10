@@ -18,7 +18,7 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar id="mainNavbar" light expand="md">
+      <Navbar id="mainNavbar" light expand="md" fixed="top">
       <Link to="/">
         <img id="logo" src={knitting} alt="logo" />
     </Link>
@@ -26,16 +26,16 @@ const Header = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem>
+            <NavItem onClick={toggle}>
               <Link className="nav_link" to="/">Home</Link>
             </NavItem>
-            <NavItem>
+            <NavItem onClick={toggle}>
             <Link className="nav_link" to="/shop">Shop</Link>
           </NavItem>
-          <NavItem>
+          <NavItem onClick={toggle}>
           <Link className="nav_link" to="/orders">Egyedi megrendelések</Link>
         </NavItem>
-            <NavItem>
+            <NavItem onClick={toggle}>
               <Link className="nav_link" to="/about">Rólam</Link>
             </NavItem>
           </Nav>

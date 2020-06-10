@@ -15,16 +15,19 @@ export default function Shop() {
     return (
         <div>
         <Container>
-            <Row>
-              <h1>Shop</h1>
+            <Row id="shop_title">
+              <Col sm="12" md={{ size: 6, offset: 5 }}><h1>Shop</h1></Col>
+            </Row>
+            <Row className="products_row">
+            <h2>Sapkák</h2>
             </Row>
             <Row className="products_row">
               <Col md="4">
                <Card className="shop-products">
                  <CardImg top width="100%" src={sapka_colorful} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Sapka</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Pasztelszivárvány sapka</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 2 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                        <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -35,8 +38,8 @@ export default function Shop() {
                <Card className="shop-products">
                  <CardImg top width="100%" src={sapka_colorful2} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Sapka</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Pasztelszivárvány sapka virággal</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 2 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -47,8 +50,8 @@ export default function Shop() {
                <Card className="shop-products">
                  <CardImg top width="100%" src={sapka_peach} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Sapka</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Téli sapka</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 2 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -57,12 +60,15 @@ export default function Shop() {
                </Col>
                </Row>
                <Row className="products_row">
+               <h2>Zoknik</h2>
+               </Row>
+               <Row className="products_row">
                <Col md="4">
                <Card className="shop-products">
                  <CardImg top width="100%" src={zokni_feher} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Zokni</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Hópehelymintás zokni</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 2 hét. Elérhető többféle színben..</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -73,8 +79,8 @@ export default function Shop() {
                <Card className="shop-products">
                  <CardImg top width="100%" src={zokni_pink} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Zokni</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Mintás női zokni</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 2 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -85,8 +91,8 @@ export default function Shop() {
                <Card className="shop-products">
                  <CardImg top width="100%" src={zokni_blue} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Zokni</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Téli mintás gyerekzokni</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 2 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -95,15 +101,15 @@ export default function Shop() {
                </Col>
               </Row>
               <Row className="products_row">
-               <h2>Játékok</h2>
+               <h2>Játékok és gyerekholmik</h2>
                </Row>
               <Row className="products_row">
                <Col md="4">
                <Card className="shop-products">
                  <CardImg top width="100%" src={goose} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Zokni</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Játékliba</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 3 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -114,8 +120,8 @@ export default function Shop() {
                <Card className="shop-products">
                  <CardImg top width="100%" src={elephant} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Zokni</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Elefántos párna</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 3 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -126,8 +132,8 @@ export default function Shop() {
                <Card className="shop-products">
                  <CardImg top width="100%" src={blanket} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Zokni</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Patchwork Takaró</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 3 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
@@ -140,8 +146,8 @@ export default function Shop() {
                <Card className="shop-products">
                  <CardImg top width="100%" src={pig} alt="Card image cap" />
                   <CardBody>
-                     <CardTitle>Zokni</CardTitle>
-                      <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                     <CardTitle>Zöldmalac és Manófalvi Manó</CardTitle>
+                      <CardText>Elkészítési idő körülbelül 3 hét. Elérhető többféle színben.</CardText>
                         <CardText>
                         <small className="text-muted">Elérhető megrendelésre</small>
                        </CardText>
