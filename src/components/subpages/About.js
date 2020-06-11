@@ -31,7 +31,7 @@ export default function About() {
             </div>
             </div>
         </Container>
-        <div class="container">
+        <div class="lamp_container">
         <div class="lamp">
         <div class="stand"></div>
          <div class="bulb"></div>
