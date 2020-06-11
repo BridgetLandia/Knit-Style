@@ -7,7 +7,7 @@ export default function Home() {
       <div>
         <Container fluid={true} className="mainContent">
         <div id="welcome_text_container">
-          <div className="welcome_text" ><h3><span id="bigger">Ü</span>dvözöllek Süti<span><img id="biscuit" src={biscuit}></img></span>Mama Kötödéjében!</h3></div>
+          <div className="welcome_text_title" ><h3><span id="bigger">Ü</span>dvözöllek Süti<span><img id="biscuit" src={biscuit}></img></span>Mama Kötödéjében!</h3></div>
           <div className="welcome_text">
           Nézz körül a webshopomban, ahol már 
           elkészített darabjaim közül válogathatsz 

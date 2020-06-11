@@ -70,6 +70,13 @@ h3 {
     margin-right: 2rem;
 }
 
+.welcome_text_title {
+    margin-top: 2rem;
+    display: flex;
+    width:40%;
+    color:teal;
+}
+
 .welcome_text{
     display: flex;
     width:40%;
@@ -78,6 +85,7 @@ h3 {
 
 .welcome_text_last {
     color:#0e9aa7;
+    margin-top: 1rem;
 }
 
 #biscuit{
@@ -258,6 +266,10 @@ ul {
     position: relative;
     display: flex;
     vertical-align: middle;
+}
+
+.dropdown-menu {
+    width:100%;
 }
 
     #order_container{
