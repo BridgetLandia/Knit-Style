@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap';
+import { Container } from 'reactstrap';
 import profil from '../../assets/profil2.jpg'
 
 export default function About() {
@@ -12,7 +12,7 @@ export default function About() {
             <div id="about_wrapper">
             <div id="about_text">
             <div id="profile_img_wrapper">
-            <img id="profile_img" src={profil}></img>
+            <img id="profile_img" alt="profile" src={profil}></img>
             </div>
             <div id="about_text_wrapper">
                 <div>
@@ -29,9 +29,15 @@ export default function About() {
                 </p>
                 </div>
             </div>
-            
             </div>
         </Container>
+        <div class="container">
+        <div class="lamp">
+        <div class="stand"></div>
+         <div class="bulb"></div>
+        <input type="checkbox"></input>
+        </div>
+        </div>
         </div>
     )
 }

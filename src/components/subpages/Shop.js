@@ -13,6 +13,7 @@ import pig from '../../assets/pig.jpg'
 import blanket from '../../assets/blanket.jpg'
 
 
+
 export default function Shop(props) {
   const [dropdownOpen, setOpen] = useState(false);
 
