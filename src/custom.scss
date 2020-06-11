@@ -254,6 +254,20 @@ ul {
 
 @media only screen and (max-width: 768px) {
 
+    .welcome_text_title {
+        margin-top: 6rem;
+        margin-right: 6rem;
+        display: flex;
+        width: 40%;
+        color: teal;
+    }
+
+    .welcome_text{
+        display: flex;
+        width: 80%;
+        padding: 2rem;
+        color: #0e9aa7;
+    }
     
 #shop_title{
     display: flex;
