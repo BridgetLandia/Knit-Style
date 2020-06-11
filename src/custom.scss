@@ -87,13 +87,23 @@ h3 {
 
 //Shop
 
-.shop_title{
+#shop_title{
     display: flex;
     justify-items: center;
+    margin-top: 4rem;
+    margin-left: 1rem;
+}
+
+.btn-group, .btn-group-vertical {
+    margin-top: 2rem;
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
 }
 
 .products_row {
     margin-bottom: 1rem;
+    justify-content: center;
 }
 
 .CardImage {
@@ -233,6 +243,22 @@ ul {
 //Media@
 
 @media only screen and (max-width: 768px) {
+
+    
+#shop_title{
+    display: flex;
+    justify-items: center;
+    margin-top: 4rem;
+    margin-left: 1rem;
+}
+
+.btn-group, .btn-group-vertical {
+    margin-top: 1rem;
+    margin-bottom:2rem;
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+}
 
     #order_container{
         background-color: lavender;

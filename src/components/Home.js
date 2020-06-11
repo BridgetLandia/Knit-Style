@@ -13,7 +13,7 @@ export default function Home() {
           elkészített darabjaim közül válogathatsz 
           vagy add le egyedi megrendelésed.
           </div>
-          <div className="welcome_text_last">Itt minden Szeretettel készül.</div>
+          <div className="welcome_text_last">Itt minden Szeretettel, meg némi fonallal készül.</div>
         </div>
         </Container>
         </div>

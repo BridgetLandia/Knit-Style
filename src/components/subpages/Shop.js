@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Row, Col, Card, CardBody, Button, CardTitle, CardText, CardImg } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import sapka_colorful from '../../assets/sapka_colorful.jpg'
 import sapka_colorful2 from '../../assets/sapka_colorful2.jpg'
 import sapka_peach from '../../assets/sapka_peach.jpg'
@@ -11,13 +12,32 @@ import goose from '../../assets/goose.jpg'
 import pig from '../../assets/pig.jpg'
 import blanket from '../../assets/blanket.jpg'
 
-export default function Shop() {
+
+export default function Shop(props) {
+  const [dropdownOpen, setOpen] = useState(false);
+
+  const toggle = () => setOpen(!dropdownOpen);
     return (
         <div>
         <Container>
             <Row id="shop_title">
-              <Col sm="12" md={{ size: 6, offset: 5 }}><h1>Shop</h1></Col>
+              <Col sm="12" md={{ size: 2, offset: 5 }}><h1>Shop</h1></Col>
             </Row>
+            <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+            <DropdownToggle caret>
+              Válassz Kategóriát
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem header>Kötés</DropdownItem>
+              <DropdownItem >Sapkák</DropdownItem>
+              <DropdownItem>Zoknikn</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem header>Patchwork</DropdownItem>
+              <DropdownItem>Takarók</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem header>Horgolás</DropdownItem>
+            </DropdownMenu>
+          </ButtonDropdown>
             <Row className="products_row">
             <h2>Sapkák</h2>
             </Row>

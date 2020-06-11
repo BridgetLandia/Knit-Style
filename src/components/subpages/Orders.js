@@ -2,8 +2,6 @@ import React from 'react'
 import sheep from '../../assets/sheep.svg'
 import pulover from '../../assets/pulover.jpg'
 import baby from '../../assets/baby.jpg'
-import skirt from '../../assets/skirt.jpg'
-import scarf from '../../assets/scarf.jpg'
 import { Container, Row, Col } from 'reactstrap';
 
 
@@ -17,7 +15,6 @@ export default function Orders() {
                 </Row>
              <Row id="order_image_wrapper">
                 <img className="order_img" src={baby}></img>
-                <img className="order_img" src={pulover}></img>
                 <div id="order_text">
                 <div>
                 <p>Ha valami igazán különlegessel szeretnéd meglepni babátváró ismerőseid vagy éppen magadat, állok rendelkezésedre.
@@ -37,8 +34,7 @@ export default function Orders() {
                 </ul>
                 </div>
                 </div>
-                <img className="order_img" src={skirt}></img>
-                <img className="order_img" src={scarf}></img>
+                <img className="order_img" src={pulover}></img>
                 </Row>
                 <div>
                 <img id="img_sheep" src={sheep}></img>
