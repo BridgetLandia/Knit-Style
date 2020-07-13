@@ -45,7 +45,7 @@
 // Start Homepage
 .mainContent{
     background: url("./assets/main.jpg");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 75vh;
@@ -79,6 +79,7 @@ h3 {
 
 .welcome_text{
     display: flex;
+    padding-top: 2rem;
     width:40%;
     color: #0e9aa7;
 }
@@ -223,6 +224,14 @@ ul {
 
 }
 
+#arrow {
+    height:45px;
+    margin-top:-4rem;
+    margin-right:1rem;
+    position:relative;
+    z-index: -5;
+}
+
 
 
 //Footer 
@@ -230,7 +239,6 @@ ul {
 .footer {
     color: teal;
     padding-top: 1rem;
-    padding-bottom: 1rem;;
     padding-left: 2rem;
     display: flex;
     flex-direction: column;
@@ -246,8 +254,13 @@ ul {
 .allRights {
     display: flex;
     align-self: flex-end;
+    margin-top:0.9rem;
     margin-right:0.5rem;
 	font-size: 0.7rem;
+}
+
+.allRights > p {
+    margin: 0px;
 }
 
 //Media@
@@ -264,8 +277,10 @@ ul {
 
     .welcome_text{
         display: flex;
-        width: 80%;
-        padding: 2rem;
+        width: 60%;
+        padding: 2rem 0rem;
+        padding-top: 2rem;
+        margin-right: 2rem;
         color: #0e9aa7;
     }
     
@@ -374,7 +389,14 @@ ul {
    
 }
 
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        height: auto !important;
+    }
+}
 
+
+//CSS Lamp
 
 .lamp_container{
 	height: 350px;

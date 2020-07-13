@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'reactstrap';
 import profil from '../../assets/profil2.jpg'
+import arrow from '../../assets/arrow.gif'
 
 export default function About() {
     return (
@@ -35,6 +36,7 @@ export default function About() {
         <div class="lamp">
         <div class="stand"></div>
          <div class="bulb"></div>
+         <img id="arrow" src={arrow}></img>
         <input type="checkbox"></input>
         </div>
         </div>
