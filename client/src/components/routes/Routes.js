@@ -4,6 +4,8 @@ import NotFound from '../layout/NotFound';
 import Shop from '../subpages/Shop';
 import Orders from '../subpages/Orders';
 import About from '../subpages/About';
+import ProductDetails from '../subpages/ProductDetails';
+import Cart from '../subpages/Cart';
 
 export default function Routes() {
 	return (
@@ -12,6 +14,8 @@ export default function Routes() {
 				<Route exact path="/shop" component={Shop} />
 				<Route exact path="/orders" component={Orders} />
 				<Route exact path="/about" component={About} />
+				<Route path="/product/:id" component={ProductDetails} />
+				<Route path="/cart/:id?" component={Cart} />
 				<Route component={NotFound} />
 			</Switch>
 		</div>
