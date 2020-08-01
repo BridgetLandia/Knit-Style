@@ -1,15 +1,12 @@
-const path = require('path');
-const express = require('express');
+import express from 'express';
+import data from './data';
+
 const app = express();
-const publicPath = path.join(__dirname, '..', 'build');
-const port = process.env.PORT || 3000;
 
-app.use(express.static(publicPath));
-
-app.get('*', (req, res) => {
-	res.sendFile(path.join(publicPath, 'index.html'));
+app.get('/api/products', (req, res) => {
+	res.send(data.products);
 });
 
-app.listen(port, () => {
-	console.log('Server is up');
+app.listen(5000, () => {
+	console.log('Server strated');
 });
