@@ -6,6 +6,8 @@ import Orders from '../subpages/Orders';
 import About from '../subpages/About';
 import ProductDetails from '../subpages/ProductDetails';
 import Cart from '../subpages/Cart';
+import SignIn from '../subpages/SignIn';
+import Register from '../subpages/Register';
 
 export default function Routes() {
 	return (
@@ -16,6 +18,8 @@ export default function Routes() {
 				<Route exact path="/about" component={About} />
 				<Route path="/product/:id" component={ProductDetails} />
 				<Route path="/cart/:id?" component={Cart} />
+				<Route path="/signin" component={SignIn} />
+				<Route path="/register" component={Register} />
 				<Route component={NotFound} />
 			</Switch>
 		</div>
