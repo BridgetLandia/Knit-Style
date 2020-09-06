@@ -1,14 +1,32 @@
 import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import {
+	Collapse,
+	Navbar,
+	NavbarToggler,
+	NavbarBrand,
+	Nav,
+	NavItem,
+	Dropdown,
+	DropdownItem,
+	DropdownToggle,
+	DropdownMenu
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../actions/userActions';
 import knitting from '../../assets/knitting.svg';
 
 const Header = (props) => {
+	const [ dropdownOpen, setDropdownOpen ] = useState(false);
+	const toggledown = () => setDropdownOpen(!dropdownOpen);
 	const [ isOpen, setIsOpen ] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 	const userSignIn = useSelector((state) => state.userSignIn);
 	const { userInfo } = userSignIn;
+	const dispatch = useDispatch();
+	const handleLogout = () => {
+		dispatch(logout());
+	};
 	return (
 		<div>
 			<Navbar id="mainNavbar" light expand="md" fixed="top">
@@ -52,10 +70,40 @@ const Header = (props) => {
 								</Link>
 							)}
 						</NavItem>
+						{userInfo &&
+						userInfo._isAdmin && (
+							<Dropdown nav isOpen={dropdownOpen} toggle={toggledown}>
+								<DropdownToggle nav caret>
+									Admin
+								</DropdownToggle>
+								<DropdownMenu>
+									<DropdownItem>
+										<Link to="/manageorders">Orders</Link>
+									</DropdownItem>
+									<DropdownItem>
+										<Link to="/products">Products</Link>
+									</DropdownItem>
+								</DropdownMenu>
+							</Dropdown>
+						)}
+
 						<NavItem onClick={toggle}>
-							<Link className="nav_link" to="/cart">
-								Kosár
-							</Link>
+							{userInfo ? (
+								<Link className="nav_link" to="/profile">
+									{userInfo._name}
+								</Link>
+							) : (
+								<Link className="nav_link" to="/signin">
+									Sign in
+								</Link>
+							)}
+						</NavItem>
+						<NavItem>
+							{userInfo && (
+								<Link to="/" onClick={handleLogout}>
+									Log out
+								</Link>
+							)}
 						</NavItem>
 					</Nav>
 				</Collapse>

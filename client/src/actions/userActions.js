@@ -4,6 +4,7 @@ import {
 	USER_SIGNIN_REQUEST,
 	USER_SIGNIN_SUCCESS,
 	USER_SIGNIN_FAIL,
+	USER_LOGOUT,
 	USER_REGISTER_REQUEST,
 	USER_REGISTER_SUCCESS,
 	USER_REGISTER_FAIL
@@ -31,4 +32,9 @@ const register = (name, email, password) => async (dispatch) => {
 	}
 };
 
-export { signIn, register };
+const logout = () => (dispatch) => {
+	Cookie.remove('userInfo');
+	dispatch({ type: USER_LOGOUT });
+};
+
+export { signIn, register, logout };
